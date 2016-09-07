@@ -1,0 +1,67 @@
+.header-top{
+  padding: 8px 0;
+  border-bottom: 1px solid $grey-light;
+  img, span{
+    vertical-align: middle;
+  }
+  .about-short{
+    font-weight: 400;
+    font-size: px2em(13);
+  }
+  .header-top-share{
+    font-weight: 700;
+    font-family: $angelina;
+  }
+  .left-content{
+    padding-top: 7px;
+  }
+  .right-content{
+    font-size: px2em(23.5);
+    .header-share-icons>a {
+      color: $system-red;
+    }
+    img{
+      margin: 0 0 3px 9px;
+    }
+  }
+}
+.background-image-header{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
+      background-size: 0 0;
+  }
+}
+.header-brand {
+  .header-logo{
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .brand-content{
+    margin: 36px 0 36px 36px;
+    padding: 19px 18px;
+    background-color: $grey-lighter;
+    .btn-brand {
+      padding: 16px;
+      background-color: $system-red;
+      font-weight: 400;
+      font-size: px2em(19);
+      text-transform: uppercase;
+      color: white;
+    }
+    .brand-message{
+      position: relative;
+    }
+    .brand-arrow{
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+    }
+  }
+  a,
+  a:hover,
+  a:focus {
+    color: white;
+  }
+}

@@ -1,0 +1,26 @@
+// Font Variables
+
+@import 'https://fonts.googleapis.com/css?family=Nunito';
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue.otf');
+}
+@font-face {
+    font-family: 'Angelina';
+    src: url('../fonts/angelina.TTF');
+}
+
+$base-font: 'Nunito', serif;    // replace with Avenir font
+$bebas-neue: 'Bebas Neue', sans-serif;
+$angelina: 'Angelina', cursive, Arial, serif;
+
+$browser-context: 16; // Default font size
+
+// Colors
+
+$system-red: #b81e24;
+$grey-light: #e1e1e1;
+$grey-lighter: #f2f2f2;
+$purple-blue: #1e1e3b;
+$purple-red: #6b1e2f;

@@ -1,0 +1,42 @@
+.main-navigation{
+  background-color: $purple-blue;
+  color:white;
+  .main-navbar {
+    > li {
+      @include animate ( background-color, 320ms);
+      >a, a:visited {
+        color: white;
+      }
+    }
+    > li:hover,
+    li:focus,
+    li.active,
+    li.dropdown.active.open,
+    li.dropdown.open {
+      >a,
+       a:hover,
+       a:focus,
+       a:active {
+        color: white;
+        background-color: $purple-red;
+      }
+    }
+    li.dropdown.active.open,
+    li.dropdown.open {
+      > ul.dropdown-menu {
+        @include border-radius(5px);
+        padding: 10px;
+        > li > a {
+          color: black;
+          background-color: white;
+          border-bottom: 1px solid rgba(black, 0.1);
+        }
+         > li:last-child {
+           > a{
+             border-bottom: none;
+           }
+         }
+      }
+    }
+  }
+}

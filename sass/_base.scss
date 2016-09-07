@@ -1,0 +1,26 @@
+body{
+  font-family: $base-font;
+}
+
+h1{
+  font-family: $bebas-neue;
+}
+
+.background-image{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.no-gutters{
+  padding-left:0;
+  padding-right:0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.btn-brand{
+  @include opacity(1);
+  @include animate ( opacity, 320ms);
+  &:hover{
+    @include opacity(0.8);
+  }
+}
