@@ -1,0 +1,30 @@
+.event{
+  background-color: $purple-blue;
+  padding: 30px 0;
+  color: white;
+  p{
+    font-size: px2em(21);
+    font-weight: 400;
+  }
+  .btn-event {
+    font-family: $bebas-neue;
+    padding: 15px 22px;
+    background-color: $system-red;
+    font-size: px2em(28);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: white;
+    @include border-radius(5);
+  }
+}
+@media (max-width: 768px) {
+  .event{
+    p {
+      font-size: px2em(15);
+      text-align: center;
+    }
+    .btn-event-block {
+      text-align: center;
+    }
+  }
+}

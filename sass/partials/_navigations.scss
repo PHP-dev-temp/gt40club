@@ -1,11 +1,16 @@
 .main-navigation{
   background-color: $purple-blue;
   color:white;
+  border-bottom: 2px solid $system-red;
+  margin-bottom: 0;
   .main-navbar {
     > li {
-      @include animate ( background-color, 320ms);
       >a, a:visited {
         color: white;
+        text-transform: uppercase;
+        font-size: px2em(13);
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
     > li:hover,
@@ -24,19 +29,129 @@
     li.dropdown.active.open,
     li.dropdown.open {
       > ul.dropdown-menu {
-        @include border-radius(5px);
+        @include border-radius(15px);
         padding: 10px;
         > li > a {
+          padding-left: 0;
+          padding-right: 0;
+          line-height: 2em;
           color: black;
+          font-size: px2em(15);
+          font-weight: 700;
           background-color: white;
           border-bottom: 1px solid rgba(black, 0.1);
+          white-space: normal;
+          .float-right{
+            color: $system-red;
+          }
         }
-         > li:last-child {
-           > a{
+        > li:last-child {
+           > a {
              border-bottom: none;
            }
-         }
+        }
       }
     }
+  }
+  .login-navbar {
+    > li {
+      >a, a:visited {
+        color: white;
+        text-transform: uppercase;
+        font-size: px2em(13);
+        background-color: $system-red;
+      }
+    }
+    > li:hover,
+    li:focus,
+    li.active,
+    li.dropdown.active.open,
+    li.dropdown.open {
+      >a,
+       a:hover,
+       a:focus,
+       a:active {
+        color: white;
+        background-color: $system-red;
+      }
+    }
+    li.dropdown.active.open,
+    li.dropdown.open {
+      > ul.dropdown-menu {
+        padding: 14px;
+        width: 286px;
+        background-color: $system-red;
+        border: none;
+        > li {
+          font-size: px2em(13);
+          font-weight: 700;
+          a {
+            text-transform: uppercase;
+            background-color: $system-red;
+            width: 150px;
+            display: inline-block;
+            padding-left: 10px;
+            line-height: 28px;
+            margin-top: 10px;
+          }
+          input{
+            @include border-radius(8px);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: black;
+            border: none;
+          }
+          button{
+            @include border-radius(5px);
+            width: 88px;
+            height: 28px;
+            color: $system-red;
+            background-color: white;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// Change nav collapse width
+@media (max-width: 991px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .collapsing {
+    overflow: hidden!important;
   }
 }

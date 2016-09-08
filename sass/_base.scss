@@ -2,7 +2,7 @@ body{
   font-family: $base-font;
 }
 
-h1{
+h1, h2, h3{
   font-family: $bebas-neue;
 }
 
@@ -11,16 +11,22 @@ h1{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .no-gutters{
   padding-left:0;
   padding-right:0;
   margin-left: 0;
   margin-right: 0;
 }
-.btn-brand{
+
+.btn-hover{
   @include opacity(1);
   @include animate ( opacity, 320ms);
   &:hover{
-    @include opacity(0.8);
+    @include opacity(0.9);
   }
+}
+
+.float-right{
+  float: right;
 }
