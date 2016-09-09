@@ -1,0 +1,52 @@
+.footer{
+  background-color: $grey-black;
+  color:white;
+  padding: 20px 0 0;
+  p{
+    color: $grey;
+    line-height: 2em;
+    font-size: px2em(14);
+    a, a:focus, a:hover{
+      color: white;
+    }
+    .fa, a>.fa{
+      color: $system-red;
+    }
+  }
+  img{
+    margin: 5px 22px 22px 5px;
+  }
+  .footer-bottom{
+    background-color: $system-red;
+    padding-top: 12px;
+    padding-bottom: 26px;
+    margin-top: 15px;
+  }
+  .lighter-bg{
+    background-color: $grey-black-lighter;
+    padding: 1px 15px;
+    .fa{
+      font-size: px2em(10);
+    }
+    a>.fa{
+      font-size: px2em(14);
+     }
+  }
+  input[type="email"] {
+    width: 222px;
+    height: 32px;
+    padding-left: 20px;
+    padding-right: 50px;
+    @include border-radius(16px);
+    border: none;
+    color: $grey-dark;
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: $grey-dark;
+    margin-left: -50px;
+    height: 32px;
+    width: 50px;
+  }
+}

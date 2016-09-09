@@ -2,7 +2,7 @@ body{
   font-family: $base-font;
 }
 
-h1, h2, h3{
+h2{
   font-family: $bebas-neue;
 }
 
@@ -29,4 +29,44 @@ h1, h2, h3{
 
 .float-right{
   float: right;
+}
+
+.image-fading{
+  background-size: fixed;
+  img {
+    opacity: 1;
+    @include animate(all, 640ms);
+    @include transform(scale(1));
+  }
+  &:hover{
+    img {
+      opacity: 0;
+      @include transform(scale(0));
+    }
+  }
+  @media (max-width: 768px) {
+    background-size: 0 0;
+    &:hover{
+      img {
+        opacity: 1;
+        @include transform(scale(1));
+      }
+    }
+  }
+}
+
+.img-share{
+  position: relative;
+  .share-buttons{
+    opacity: 0;
+    @include animate(opacity, 320ms);
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  &:hover{
+    .share-buttons {
+      opacity: 1;
+    }
+  }
 }

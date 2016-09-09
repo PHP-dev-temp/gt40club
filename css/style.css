@@ -8,7 +8,7 @@
 body {
   font-family: "Nunito", serif; }
 
-h1, h2, h3 {
+h2 {
   font-family: "Bebas Neue", sans-serif; }
 
 .background-image {
@@ -36,6 +36,53 @@ h1, h2, h3 {
 
 .float-right {
   float: right; }
+
+.image-fading {
+  background-size: fixed; }
+  .image-fading img {
+    opacity: 1;
+    -webkit-transition: all 640ms ease;
+    -moz-transition: all 640ms ease;
+    -ms-transition: all 640ms ease;
+    -o-transition: all 640ms ease;
+    transition: all 640ms ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  .image-fading:hover img {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0); }
+  @media (max-width: 768px) {
+    .image-fading {
+      background-size: 0 0; }
+      .image-fading:hover img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1); } }
+
+.img-share {
+  position: relative; }
+  .img-share .share-buttons {
+    opacity: 0;
+    -webkit-transition: opacity 320ms ease;
+    -moz-transition: opacity 320ms ease;
+    -ms-transition: opacity 320ms ease;
+    -o-transition: opacity 320ms ease;
+    transition: opacity 320ms ease;
+    position: absolute;
+    bottom: 5px;
+    right: 10px; }
+  .img-share:hover .share-buttons {
+    opacity: 1; }
 
 .header-top {
   padding: 8px 0;
@@ -322,5 +369,147 @@ h1, h2, h3 {
     text-align: center; }
   .event .btn-event-block {
     text-align: center; } }
+.about-content, .membership-content, .events-content {
+  padding-top: 80px;
+  padding-bottom: 70px; }
+  .about-content h2, .membership-content h2, .events-content h2 {
+    font-size: 2.625em;
+    color: #b81e24;
+    text-align: center;
+    margin-bottom: 50px; }
+  .about-content p, .membership-content p, .events-content p {
+    font-size: 1.125em;
+    color: #858585;
+    font-weight: 300;
+    line-height: 2em; }
+    .about-content p a, .about-content p a:focus, .about-content p a:hover, .membership-content p a, .membership-content p a:focus, .membership-content p a:hover, .events-content p a, .events-content p a:focus, .events-content p a:hover {
+      font-weight: 700;
+      color: #020064;
+      text-decoration: none; }
+  @media (max-width: 768px) {
+    .about-content h2, .membership-content h2, .events-content h2 {
+      font-size: 2.375em; } }
+  @media (max-width: 991px) {
+    .about-content h2, .membership-content h2, .events-content h2 {
+      margin-bottom: 20px; }
+    .about-content p, .membership-content p, .events-content p {
+      line-height: 1.4em;
+      font-size: 1em; } }
+
+.membership-content, .news-content {
+  background-color: #f2f2f2; }
+
+.news-content {
+  padding-top: 35px;
+  padding-bottom: 25px; }
+  .news-content h3 {
+    text-transform: uppercase;
+    font-size: 1.5625em;
+    font-weight: 700;
+    color: #b81e24;
+    margin-bottom: 40px; }
+  .news-content h4 {
+    margin-top: 33px; }
+    .news-content h4 a, .news-content h4 a:focus, .news-content h4 a:hover {
+      font-size: 1.125em;
+      font-weight: 700;
+      text-decoration: none; }
+  .news-content p {
+    color: #858585;
+    font-weight: 300;
+    margin-bottom: 30px; }
+  .news-content .share-buttons a, .news-content .share-buttons a:hover, .news-content .share-buttons a:focus {
+    font-size: 1.125em;
+    color: white; }
+  @media (max-width: 768px) {
+    .news-content p, .news-content h4 {
+      text-align: center; }
+    .news-content img {
+      margin: 0 auto; } }
+
+.gt-club-footer {
+  padding-top: 35px;
+  padding-bottom: 50px; }
+  .gt-club-footer h1 {
+    font-size: 3.625em;
+    font-weight: 700;
+    color: #020064; }
+  .gt-club-footer p {
+    font-size: 1.125em;
+    color: #565656; }
+  .gt-club-footer .btn-join {
+    font-family: "Bebas Neue", sans-serif;
+    padding: 12px 28px;
+    background-color: #b81e24;
+    font-size: 1.75em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: white;
+    -webkit-border-radius: 5;
+    border-radius: 5;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  .gt-club-footer .footer-payment {
+    display: inline-block;
+    padding: 15px;
+    background-color: white;
+    max-width: 192px;
+    -webkit-border-radius: 5;
+    border-radius: 5;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  @media (max-width: 991px) {
+    .gt-club-footer h1 {
+      font-size: 2.625em; } }
+  @media (max-width: 768px) {
+    .gt-club-footer h1, .gt-club-footer p {
+      text-align: center; }
+    .gt-club-footer .payment-join {
+      text-align: center; } }
+
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px 0 0; }
+  .footer p {
+    color: #858585;
+    line-height: 2em;
+    font-size: 0.875em; }
+    .footer p a, .footer p a:focus, .footer p a:hover {
+      color: white; }
+    .footer p .fa, .footer p a > .fa {
+      color: #b81e24; }
+  .footer img {
+    margin: 5px 22px 22px 5px; }
+  .footer .footer-bottom {
+    background-color: #b81e24;
+    padding-top: 12px;
+    padding-bottom: 26px;
+    margin-top: 15px; }
+  .footer .lighter-bg {
+    background-color: #2e2e2e;
+    padding: 1px 15px; }
+    .footer .lighter-bg .fa {
+      font-size: 0.625em; }
+    .footer .lighter-bg a > .fa {
+      font-size: 0.875em; }
+  .footer input[type="email"] {
+    width: 222px;
+    height: 32px;
+    padding-left: 20px;
+    padding-right: 50px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    border: none;
+    color: #565656; }
+  .footer button {
+    background: transparent;
+    border: none;
+    color: #565656;
+    margin-left: -50px;
+    height: 32px;
+    width: 50px; }
 
 /*# sourceMappingURL=style.css.map */
