@@ -301,14 +301,68 @@ h2 {
     display: block !important; }
 
   .collapsing {
+    display: none;
     overflow: hidden !important; } }
 .main-navigation .navbar-toggle {
   float: left;
-  border: none; }
+  border: none;
+  margin-left: 15px; }
   .main-navigation .navbar-toggle .icon-bar {
     background-color: white; }
   .main-navigation .navbar-toggle:hover, .main-navigation .navbar-toggle:focus, .main-navigation .navbar-toggle:active {
-    background-color: black; }
+    background-color: #6b1e2f; }
+
+.navbar-collapse.collapse.in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  text-align: center;
+  width: 92%;
+  max-width: 500px;
+  border-right: 3px solid #b81e24; }
+  .navbar-collapse.collapse.in li > a {
+    font-size: 1em; }
+  .navbar-collapse.collapse.in ul.dropdown-menu > li > a {
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+    text-align: center; }
+    .navbar-collapse.collapse.in ul.dropdown-menu > li > a .fa {
+      float: none; }
+
+.btn-join-us {
+  margin: 8px 15px 8px 0;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #b81e24;
+  font-weight: 400;
+  text-transform: uppercase; }
+  .btn-join-us, .btn-join-us:hover, .btn-join-us:focus, .btn-join-us:visited {
+    color: white;
+    text-decoration: none; }
+
+.collapsed-image {
+  padding: 25px 5px;
+  position: relative; }
+  .collapsed-image .fa {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1em;
+    cursor: pointer; }
+  .collapsed-image img {
+    margin: 15px auto; }
+
+li.collapsed-buttons {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px; }
+  li.collapsed-buttons a {
+    display: inline-block;
+    width: 136px; }
+  li.collapsed-buttons a:first-child {
+    width: 100px; }
 
 .gt-carousel-item {
   min-height: 432px;

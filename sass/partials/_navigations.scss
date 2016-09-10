@@ -152,16 +152,78 @@
     display: block!important;
   }
   .collapsing {
+    display: none;
     overflow: hidden!important;
   }
 }
 .main-navigation .navbar-toggle {
   float:left;
   border: none;
+  margin-left: 15px;
   .icon-bar{
     background-color: white;
   }
   &:hover, &:focus, &:active{
-     background-color: black;
+     background-color: $purple-red;
+  }
+}
+.navbar-collapse.collapse.in{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(black, 0.8);
+  z-index: 9999;
+  text-align: center;
+  width: 92%;
+  max-width: 500px;
+  border-right: 3px solid $system-red;
+  li>a{
+    font-size: px2em(16);
+  }
+  ul.dropdown-menu > li > a {
+    background: rgba(black, 0.2)!important;
+    color:white!important;
+    text-align: center;
+    .fa{
+      float:none;
+    }
+  }
+}
+.btn-join-us{
+  margin: 8px 15px 8px 0;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: $system-red;
+  font-weight: 400;
+  text-transform: uppercase;
+  &, &:hover, &:focus, &:visited{
+    color:white;
+    text-decoration: none;
+  }
+}
+.collapsed-image{
+  padding: 25px 5px;
+  position: relative;
+  .fa {
+    position: absolute;
+    top:10px;
+    right: 20px;
+    font-size: px2em(16);
+    cursor: pointer;
+  }
+  img{
+    margin: 15px auto;
+  }
+}
+li.collapsed-buttons{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  a{
+    display: inline-block;
+    width: 136px;
+  }
+  a:first-child{
+    width: 100px;
   }
 }
