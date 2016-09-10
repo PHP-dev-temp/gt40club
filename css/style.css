@@ -302,6 +302,14 @@ h2 {
 
   .collapsing {
     overflow: hidden !important; } }
+.main-navigation .navbar-toggle {
+  float: left;
+  border: none; }
+  .main-navigation .navbar-toggle .icon-bar {
+    background-color: white; }
+  .main-navigation .navbar-toggle:hover, .main-navigation .navbar-toggle:focus, .main-navigation .navbar-toggle:active {
+    background-color: black; }
+
 .gt-carousel-item {
   min-height: 432px;
   padding: 70px 0; }
